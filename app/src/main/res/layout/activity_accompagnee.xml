@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:background="?attr/colorPrimary"
+    tools:context=".AccoProfil">
+         <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="768dp"
+                    android:layout_marginTop="50dp"
+                    android:paddingTop="60dp"
+                    app:cardBackgroundColor="@color/whiteTextColor"
+                    app:cardCornerRadius="40dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/textInputLastName"
+                            style="@style/parent"
+                            android:layout_marginTop="@dimen/loginViewsMargin">
+
+                            <EditText
+                                android:id="@+id/editTextLastName"
+                                style="@style/modifiedEditText"
+                                android:hint="Nom"
+                                android:maxLines="1" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/textInputFirstName"
+                            style="@style/parent"
+                            android:layout_marginTop="@dimen/loginViewsMargin">
+
+                            <EditText
+                                android:id="@+id/editTextFirstName"
+                                style="@style/modifiedEditText"
+                                android:hint="Prénom"
+                                android:maxLines="1" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/textInputLiaison"
+                            style="@style/parent"
+                            android:layout_marginTop="@dimen/loginViewsMargin">
+
+                            <EditText
+                                android:id="@+id/editTextLiaison"
+                                style="@style/modifiedEditText"
+                                android:hint="Liaison"
+                                android:maxLines="1" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/textInputMobile"
+                            style="@style/parent"
+                            android:layout_marginTop="@dimen/loginViewsMargin">
+
+                            <EditText
+                                android:id="@+id/editTextMobile"
+                                style="@style/modifiedEditText"
+                                android:hint="@string/phone"
+                                android:inputType="phone"
+                                android:maxLines="1" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layoutRadioButtonGroup"
+                            style="@style/parent"
+                            android:layout_marginTop="@dimen/loginViewsMargin">
+
+                            <RadioGroup
+                                android:id="@+id/radioButtonGroup"
+                                style="@style/parent"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/textViewSexe"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Sexe  :          " />
+
+                                <RadioButton
+                                    android:id="@+id/radioButtonFemale"
+                                    style="@style/modifiedEditText"
+                                    android:layout_width="124dp"
+                                    android:layout_height="wrap_content"
+                                    android:checked="true"
+                                    android:text="Femme" />
+
+                                <RadioButton
+                                    android:id="@+id/radioButtonMale"
+                                    style="@style/modifiedEditText"
+                                    android:layout_width="127dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Homme" />
+                            </RadioGroup>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:id="@+id/textViewEditAccompagnee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="20dp"
+                            android:text="Edit Accompagnée  :          " />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="10dp"
+                            >
+
+                            <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                                android:id="@+id/saveButton"
+                                style="@style/loginButton"
+                                initialCornerAngle="27dp"
+                                spinning_bar_color="#FFF"
+                                spinning_bar_padding="6dp"
+                                spinning_bar_width="4dp"
+                                android:layout_width="150dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/loginViewsMargin"
+                                android:layout_marginEnd="2dp"
+                                android:onClick="onClickSave"
+                                android:text="Enregistrer" />
+
+                            <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                                android:id="@+id/discardButton"
+                                style="@style/loginButton"
+                                initialCornerAngle="27dp"
+                                spinning_bar_color="#FFF"
+                                spinning_bar_padding="6dp"
+                                spinning_bar_width="4dp"
+                                android:layout_width="146dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/loginViewsMargin"
+                                android:onClick="onClickDiscard"
+                                android:text="Annuler" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="5dp">
+
+                            <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                                android:id="@+id/declareLostButton"
+                                style="@style/loginButton"
+                                initialCornerAngle="27dp"
+                                spinning_bar_color="#FFF"
+                                spinning_bar_padding="6dp"
+                                spinning_bar_width="4dp"
+                                android:layout_width="200dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/loginViewsMargin"
+                                android:layout_marginEnd="2dp"
+                                android:onClick="onClickDeclare"
+                                android:text="Declarer Perdu" />
+
+                            <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                                android:id="@+id/showTasksButton"
+                                style="@style/loginButton"
+                                initialCornerAngle="27dp"
+                                spinning_bar_color="#FFF"
+                                spinning_bar_padding="6dp"
+                                spinning_bar_width="4dp"
+                                android:layout_width="100dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/loginViewsMargin"
+                                android:onClick="onClickTask"
+                                android:text="Taches" />
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/textViewEditZone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="10dp"
+                            android:text="Edit Zones  :          " />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="10dp">
+
+                            <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                                android:id="@+id/ajoutZoneButton"
+                                style="@style/loginButton"
+                                initialCornerAngle="27dp"
+                                spinning_bar_color="#FFF"
+                                spinning_bar_padding="6dp"
+                                spinning_bar_width="4dp"
+                                android:layout_width="150dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/loginViewsMargin"
+                                android:layout_marginEnd="2dp"
+                                android:onClick="onClickAddZone"
+                                android:text="Ajouter" />
+
+                            <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                                android:id="@+id/showButton"
+                                style="@style/loginButton"
+                                initialCornerAngle="27dp"
+                                spinning_bar_color="#FFF"
+                                spinning_bar_padding="6dp"
+                                spinning_bar_width="4dp"
+                                android:layout_width="146dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/loginViewsMargin"
+                                android:onClick="onClickShowZones"
+                                android:text="Consulter" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
